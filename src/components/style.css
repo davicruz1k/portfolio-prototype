@@ -1,0 +1,263 @@
+/*Loading screen*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+a{
+    text-decoration: none;
+}
+* {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    background-color: black;
+}
+
+.Loading {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.Loading img {
+    margin: 24px;
+    height: 40%;
+    animation: zoom-in-zoom-out 1s ease infinite;
+}
+
+/*Hero section*/
+.Right {
+    float: right;
+    margin-right: 30%;
+    height: 100px;
+    margin-top: 5%;
+}
+
+.typewriter .type {
+    overflow: hidden;
+    border-right: .3px solid rgb(255, 255, 255);
+    white-space: nowrap;
+    font-size: 1.6rem;
+    width: 0;
+    height: 10%;
+    animation: typing 1s forwards;
+    background: -webkit-linear-gradient(#eee, #cbcbcb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.t_border {
+    width: 150px;
+    height: 50px;
+    border: none;
+    border: solid 2px rgb(255, 255, 255);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0);
+    font-size: 25px;
+}
+
+/*.Right div{
+    overflow: hidden;
+    border-right: .3px solid rgb(255, 255, 255);
+    white-space: nowrap;
+    font-size: 1.6rem;
+    width: 0;
+    height: 10%;
+    animation: typing 1s forwards;
+}*/
+.t_border:hover {
+    background: white;
+    color: black;
+}
+
+.description {
+    width: 300px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.Left {
+    width: 50%;
+    height: 400px;
+}
+
+.Left img {
+    animation: zoom-in 0.5s forwards;
+    width: 50%;
+    margin-left: 40%;
+}
+
+.Left h2 {
+    margin-left: 40%;
+}
+
+.Hero {
+    margin-top: 5%;
+    width: 100%;
+}
+/*About*/
+.img_about{
+    width: 60%;
+}
+.About{
+    height: 500px;
+}
+/*Animations*/
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.5, 1.5);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes zoom-in {
+    0% {
+        transform: scale(0.3, 0.3);
+    }
+
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes zoom-out {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(0.3, 0.3);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 35%
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: scroll()) {
+        .Hero {
+            animation: zoom-out linear both;
+            animation-timeline: scroll();
+        }
+    }
+}
+
+/*general*/
+.sidebyside a {
+    text-align: center;
+    display: inline-block;
+    margin: 0 3px;
+    height: 30px;
+}
+/*hr {
+    overflow: visible; 
+    height: 30px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr:before { 
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: white;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}*/
+
+
+.left_2 {
+    float: left;
+    margin-left: 300px;
+}
+.mobile_h2{
+    display: none;
+}
+.right_2{
+    margin-left: 50%;
+}
+/*Responsive*/
+@media (max-width: 1200px) {
+    .Right {
+        margin-right: 10%;
+
+    }
+
+    .Left img {
+        width: 100%;
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 950px) {
+    .right_2{
+        display: none;
+    }
+    .About{
+        height: 300px;
+    }
+    .left_2{
+        margin-left: 0;
+        float: none;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        height: 300px;
+    }
+    .Right {
+        margin-right: 0;
+        float: none;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        height: 300px;
+    }
+    .Right h2 {
+        margin-right: 0;
+        text-align: center;
+    }
+    .description{
+        text-align: center;
+    }
+
+    .Left {
+        display: none;
+    }
+    .typewriter{
+        display: none;
+    }
+    .mobile_h2{
+        display: flex;
+        font-size: 30px;
+    }
+    .sidebyside a {
+        text-align: center;
+        display: inline-block;
+        margin: 0 3px;
+    }
+}
+
+.Working{
+    display: flex;
+    align-items: center;
+}
